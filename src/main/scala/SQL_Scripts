@@ -1,0 +1,14 @@
+--- Inner Join
+select t1.ENAME from SCOTT.EMP t1 inner join SCOTT.DEPT t2 on t1.DEPTNO=t2.DEPTNO where t2.DNAME='Engineering'
+
+--Left outer join
+select t1.ENAME,t2.DNAME from SCOTT.EMP t1 left outer join SCOTT.DEPT t2 on t1.DEPTNO=t2.DEPTNO
+
+--- Right outer join
+select t1.ENAME,t2.DNAME from SCOTT.EMP t1 right outer join SCOTT.DEPT t2 on t1.DEPTNO=t2.DEPTNO
+
+--- full outer join
+select t1.ENAME,t2.DNAME from SCOTT.EMP t1 full outer join SCOTT.DEPT t2 on t1.DEPTNO=t2.DEPTNO
+
+---- self join
+select t1.DEPTNO,t1.ENAME as employee_name, t2.ENAME as employee2_name from SCOTT.EMP t1 join SCOTT.EMP t2 on t1.EMPNO =t2.EMPNO
